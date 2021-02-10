@@ -23,7 +23,7 @@ Also, it provides a range of cloud services, including compute, analytics, stora
 
 ### What is IoT Plug and Play?
 
-[IoT Plug and Play](https://docs.microsoft.com/en-us/azure/iot-pnp) enables solutions builders to integrate smart devices with their solutions without any manual configuration. At the core of IoT Plug and Play, is a device model that  a device uses to advertise its capabilities to an IoT Plug and Play-enabled application. It contains:
+[IoT Plug and Play](https://docs.microsoft.com/en-us/azure/iot-pnp) enables solutions builders to integrate smart devices with their solutions without any manual configuration. At the core of IoT Plug and Play, is a device model that a device uses to advertise its capabilities to an IoT Plug and Play-enabled application. It contains:
 
 - Properties: represents the read-only or writable state of a device or other entity 
 - Telemetry: data sent by a device
@@ -49,7 +49,7 @@ Previously, the DTDL model was managed by a private implementation called Public
 
 ## Connecting Wio Terminal to Microsoft Azure IoT Central via MQTT
 
-As explained before, we will be using the availble MQTT bridge for the communication between the Wio Terminal and Microsoft Azure IoT Central. However, you may use the HTTP bridge as well, if that is your requirement.
+As explained before, we will be using the available MQTT bridge for the communication between the Wio Terminal and Microsoft Azure IoT Central. However, you may use the HTTP bridge as well, if that is your requirement.
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/WT_client_send.png" alt="pir" width="1200" height="auto"></a></p>
 
@@ -57,7 +57,7 @@ As explained before, we will be using the availble MQTT bridge for the communica
 
 ### Microsoft Azure IoT Central Set Up 
 
-First you need to visit Microsoft Azure IoT Central, log in to your Microsoft account and create a new application for your project.
+First, you need to visit Microsoft Azure IoT Central, log in to your Microsoft account and create a new application for your project.
 
 - **STEP 1:** Visit [here](https://apps.azureiotcentral.com) to create a new application
 
@@ -120,7 +120,7 @@ We will first use a demo code that sends telemetry data from the onboard sensors
 
 <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Bootloader.png" alt="pir" width="500" height="auto"></a></p>
 
-**Note:** Once Wio Terminal is in the Bootloader mode, the blue LED will start to breath in a way that is different to blinking
+**Note:** Once Wio Terminal is in the Bootloader mode, the blue LED will start to breathe in a way that is different from blinking
 
 - **STEP 3:** Open File Explorer on your PC and you will see a new external drive, named **Arduino**
 
@@ -227,7 +227,7 @@ This is the default view and we need to make some changes to display the other t
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/save.png" alt="pir" width="600" height="auto"></a></p>
 
-- **STEP 11:** Go back to Azure IoT Central dashboard and you will be able visualize all the data coming in from the Wio Terminal.
+- **STEP 11:** Go back to Azure IoT Central dashboard and you will be able to visualize all the data coming in from the Wio Terminal.
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/final.png" alt="pir" width="750" height="auto"></a></p>
 
