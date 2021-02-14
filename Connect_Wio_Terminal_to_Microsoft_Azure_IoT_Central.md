@@ -211,6 +211,41 @@ This is the default view and we need to make some changes to display the other t
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/raw_data.png" alt="pir" width="700" height="auto"></a></p>
 
+#### Add a Rule to Send an Email
+
+Rules in IoT Central serve as a customizable response tool that trigger on actively monitored events from connected devices.
+For example, in this demo, we can set IoT Central to send an email when the light intensity level is below 50.
+
+- **STEP 1:** Click on **Rules** from the left navigation menu in Azure IoT Central.
+
+- **STEP 2:** Click on **+New** or **Create a rule**
+
+- **STEP 3:** Enter a name for the rule 
+
+- **STEP 4:** Under **Device template**, select **Seeed Wio Terminal**
+
+- **STEP 5:** Under **Conditions**, turn on **time aggregation** and select a **time window** of your choosing. Here we will set it as **5 minutes**
+
+**Note:** Every **xx** minutes, the rule evaluates once on the last **xx** minutes of data
+
+- **STEP 6:** Under **Telemetry**, select the telemetry of your chossing. Here we will set it as **Light intensity**
+
+- **STEP 7:** Under **Aggregation**, select **Average**. This will take the average value during the set **time window** before
+
+- **STEP 8:** Under **Operator**, select a condition of your choosing. Here we will use **is less than** condition
+
+- **STEP 9:** Under **Value**, type a value. Here we will type **50**
+
+- **STEP 10:** Under **Actions**, click on **Email**
+
+- **STEP 11:** Type a **Display name**, **To address** and **Note** for the email 
+
+- **STEP 12:** Click on **Done**
+
+- **STEP 13:** Finally, click **Save**
+
+Now we have successfully created a rule to send an email
+
 ### Control Hardware from Microsoft Azure IoT Central 
 
 You can not only view the telemetry data on Azure IoT Central, but also use it to control hardware as well. In this demo, we will be able to control the built-in buzzer on the Wio Terminal and specify a time duration in which the buzzer will beep
