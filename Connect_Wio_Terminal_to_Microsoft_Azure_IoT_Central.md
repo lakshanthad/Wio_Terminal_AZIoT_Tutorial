@@ -3,13 +3,13 @@
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/WT_client_send.png" alt="pir" width="1200" height="auto"></a></p>
 
 ## Introduction 
-In this tutorial, we will walk you through the process of connecting the Wio Terminal to Microsoft Azure IoT Central and send telemetry data from the onboard sensors/ hardware on the Wio Terminal such as the 3-axis accelerometer, light sensor, 3 buttons to Microsoft Azure IoT Central. Then you will be able to visualize the sensor data on interactive dashboards. Also you will be able to use Azure IoT Central to control hardware such as beeping the onboard buzzer on the Wio Terminal. Microsoft Azure IoT Central supports both HTTP and MQTT protocols for communication, but, however we will be using the MQTT protocol in this tutorial.
+In this tutorial, we will walk you through the process of connecting the Wio Terminal to Microsoft Azure IoT Central and send telemetry data from the onboard sensors/ hardware on the Wio Terminal such as the 3-axis accelerometer, light sensor, 3 buttons to Microsoft Azure IoT Central. Then you will be able to visualize the sensor data on interactive dashboards. Also you will be able to use Azure IoT Central to control hardware such as beeping the onboard buzzer on the Wio Terminal. Microsoft Azure IoT Central supports HTTP, MQTT and AMQP protocols for communication, but, however we will be using the MQTT protocol in this tutorial.
 
 ### What is Microsoft Azure?
 
 [Microsoft Azure](https://azure.microsoft.com) is Microsoft's public cloud computing platform. You can use Microsoft Azure to build, test, deploy, and manage applications and services through Microsoft-managed data centers. 
 
-Also, it provides a range of cloud services, including compute, analytics, storage and networking. Microsoft Azure provides software as a service (SaaS), platform as a service (PaaS), Infrastructure as a service (Iaas) and serverless. Finally, it supports many different programming languages, tools and frameworks.
+Also, it provides a range of cloud services, including compute, analytics, storage and networking. Microsoft Azure provides software as a service (SaaS), platform as a service (PaaS), Infrastructure as a service (IaaS) and serverless. Finally, it supports many different programming languages, tools and frameworks.
 
 ### What is Microsoft Azure IoT?
 
@@ -43,13 +43,11 @@ To be IoT Plug and Play Certified, you will need to clear a few criteria, one of
 
 This allows cloud services that use IoT Plug and Play Certified Devices to learn about device capabilities from this repository.
 
-Previously, the DTDL model was managed by a private implementation called Public Model Repository, but from October 14, 2020, it was changed to Azure/ iot-plugandplay-models (DMR) on GitHub.
-
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/PnP%20devices.png" alt="pir" width="850" height="auto"></a></p>
 
 ## Connecting Wio Terminal to Microsoft Azure IoT Central via MQTT
 
-As explained before, we will be using the available MQTT bridge for the communication between the Wio Terminal and Microsoft Azure IoT Central. However, you may use the HTTP bridge as well, if that is your requirement.
+As explained before, we will be using MQTT for the communication between the Wio Terminal and Microsoft Azure IoT Central. However, you may use the HTTP bridge as well, if that is your requirement.
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/WT_client_send.png" alt="pir" width="1200" height="auto"></a></p>
 
@@ -73,35 +71,13 @@ First, you need to visit Microsoft Azure IoT Central, log in to your Microsoft a
 
 Now you have successfully set up Azure IoT Central!
 
-### Arduino Set Up with Wio Terminal 
+### Set Up Wio Terminal 
 
-#### Initial WiFi Setup
+#### Update RTL8720 Firmware
 
-##### Wi-Fi Libraries Installation
+We need to update the firmware for the Realtek RTL8720 wireless core on the Wio Terminal. Follow [this wiki](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview) to update the RTL8720 firmware.
 
-We need the following libraries in order to use Wi-Fi on the Wio Terminal:
-
-- [Seeed_Arduino_rpcWiFi](https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi) 
-- [Seeed_Arduino_rpcUnified](https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified)
-- [Seeed_Arduino_mbedtls](https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls/tree/dev)
-- [Seeed_Arduino_FS](https://github.com/Seeed-Studio/Seeed_Arduino_FS)
-- [Seeed_Arduino_SFUD](https://github.com/Seeed-Studio/Seeed_Arduino_SFUD)
-
-Visit the GitHub repo of each library by clicking on the library name, and download them as .ZIP files
-
-<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/download%20as%20zip.png" alt="pir" width="1200" height="auto"></a></p>
-
-**Note:** Seeed_Arduino_mbedtls should be in **dev** branch
-
-After that, open [Arduino IDE](https://www.arduino.cc/en/software):
-
-- **STEP 1:** Navigate to `Sketch > Include Library > Add .ZIP Library`
-- **STEP 2:** Locate a library that you downloaded before, click on the **.ZIP file**, and click **Open**
-- **STEP 3:** Repeat the same for the remaining 4 libraries
-
-##### Update RTL8720 Firmware
-
-We need to update the firmware for the Realtek RTL8720 wireless core on the Wio Terminal. Follow [this wiki](https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview) to update the RTL8720 firmware to the latest version.
+**Note:** Make sure to update the [firmware](https://github.com/SeeedJP/wioterminal-aziot-example/releases) according to the specified version under the description of the release. 
 
 #### Download and Upload Demo Code to Wio Terminal
 
@@ -162,7 +138,7 @@ Next, let's move on to configuring Wi-Fi and Azure IoT connection
 
 - **STEP 10:** Visit previously opened serial terminal and type **set_az_iotc** `your_ID_scope` `your_primary_key` `your_device_name` 
 
-**Note:** Make sure to add a single space between each field
+**Note:** Make sure to add a single space between each field and you can decide on a `device name` of your choice.
 
 - **STEP 11:** Reset the Wio Terminal by sliding down the switch further away from the ON position and releasing 
 
@@ -248,6 +224,3 @@ You can not only view the telemetry data on Azure IoT Central, but also use it t
 - **STEP 3:** When you click **Run**, you will be able to hear a beeping sound from the buzzer for the time duration specified above
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/1000.png" alt="pir" width="500" height="auto"></a></p>
-
-
-
