@@ -224,7 +224,7 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 - **STEP 4:** Under **Device template**, select **Seeed Wio Terminal**
 
-<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/rule%201.png" alt="pir" width="1200" height="auto"></a></p>
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/rule%201.png" alt="pir" width="830" height="auto"></a></p>
 
 - **STEP 5:** Under **Conditions**, turn on **time aggregation** and select a **time window** of your choosing. Here we will set it as **5 minutes**
 
@@ -244,8 +244,7 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 - **STEP 11:** Type a **Display name**, **To address** and **Note** for the email 
 
-<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/email.png
-" alt="pir" width="1200" height="auto"></a></p>
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/email.png" alt="pir" width="1200" height="auto"></a></p>
 
 - **STEP 12:** Click on **Done**
 
