@@ -244,7 +244,7 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 - **STEP 11:** Type a **Display name**, **To address** and **Note** for the email 
 
-<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/email.png" alt="pir" width="1200" height="auto"></a></p>
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/email_3.png" alt="pir" width="1200" height="auto"></a></p>
 
 - **STEP 12:** Click on **Done**
 
