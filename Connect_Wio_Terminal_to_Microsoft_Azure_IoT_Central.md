@@ -246,6 +246,12 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 <p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/email_3.png" alt="pir" width="1200" height="auto"></a></p>
 
+**Note:** Please note that the **email address** here should be added to this **Azure IoT Central Application** and also have signed-in at lease once.
+
+- Navigate to `Administration > Users` ,click **Assign user**, fill in the **Email**, assign a **Role** and click **Save**
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/lakshanthad/Image/master/assign%20user.png" alt="pir" width="800" height="auto"></a></p>
+
 - **STEP 12:** Click on **Done**
 
 - **STEP 13:** Finally, click **Save**
